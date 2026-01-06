@@ -1,0 +1,568 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2412                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      snappyHexMeshDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+castellatedMesh true;
+snap            true;
+addLayers       false;
+
+geometry {
+    bead0 {
+        type searchableSphere;
+        centre (2.09e-02 2.68e-02 3.71e-03);
+        radius 4.50e-03;
+    }
+    bead1 {
+        type searchableSphere;
+        centre (5.34e-02 2.53e-02 3.76e-03);
+        radius 4.50e-03;
+    }
+    bead2 {
+        type searchableSphere;
+        centre (6.42e-02 3.46e-02 3.29e-03);
+        radius 4.50e-03;
+    }
+    bead3 {
+        type searchableSphere;
+        centre (6.19e-02 2.19e-02 4.88e-03);
+        radius 4.50e-03;
+    }
+    bead4 {
+        type searchableSphere;
+        centre (7.32e-02 2.52e-02 8.45e-03);
+        radius 4.50e-03;
+    }
+    bead5 {
+        type searchableSphere;
+        centre (2.39e-02 3.28e-02 9.88e-03);
+        radius 4.50e-03;
+    }
+    bead6 {
+        type searchableSphere;
+        centre (2.73e-02 2.42e-02 9.98e-03);
+        radius 4.50e-03;
+    }
+    bead7 {
+        type searchableSphere;
+        centre (4.53e-02 2.52e-02 1.02e-02);
+        radius 4.50e-03;
+    }
+    bead8 {
+        type searchableSphere;
+        centre (3.64e-02 2.26e-02 1.02e-02);
+        radius 4.50e-03;
+    }
+    bead9 {
+        type searchableSphere;
+        centre (6.68e-02 2.20e-02 1.35e-02);
+        radius 4.50e-03;
+    }
+    bead10 {
+        type searchableSphere;
+        centre (6.85e-03 3.33e-02 1.42e-02);
+        radius 4.50e-03;
+    }
+    bead11 {
+        type searchableSphere;
+        centre (4.79e-02 3.32e-02 1.55e-02);
+        radius 4.50e-03;
+    }
+    bead12 {
+        type searchableSphere;
+        centre (2.15e-02 2.19e-02 1.63e-02);
+        radius 4.50e-03;
+    }
+    bead13 {
+        type searchableSphere;
+        centre (5.73e-02 3.45e-02 1.61e-02);
+        radius 4.50e-03;
+    }
+    bead14 {
+        type searchableSphere;
+        centre (2.38e-03 2.26e-02 1.60e-02);
+        radius 4.50e-03;
+    }
+    bead15 {
+        type searchableSphere;
+        centre (3.18e-02 2.43e-02 1.74e-02);
+        radius 4.50e-03;
+    }
+    bead16 {
+        type searchableSphere;
+        centre (2.33e-02 3.09e-02 1.82e-02);
+        radius 4.50e-03;
+    }
+    bead17 {
+        type searchableSphere;
+        centre (5.63e-02 2.74e-02 2.16e-02);
+        radius 4.50e-03;
+    }
+    bead18 {
+        type searchableSphere;
+        centre (8.56e-03 3.02e-02 2.21e-02);
+        radius 4.50e-03;
+    }
+    bead19 {
+        type searchableSphere;
+        centre (6.52e-02 2.46e-02 2.23e-02);
+        radius 4.50e-03;
+    }
+    bead20 {
+        type searchableSphere;
+        centre (1.20e-02 2.17e-02 2.37e-02);
+        radius 4.50e-03;
+    }
+    bead21 {
+        type searchableSphere;
+        centre (7.52e-02 2.54e-02 2.40e-02);
+        radius 4.50e-03;
+    }
+    bead22 {
+        type searchableSphere;
+        centre (5.03e-02 2.17e-02 2.56e-02);
+        radius 4.50e-03;
+    }
+    bead23 {
+        type searchableSphere;
+        centre (2.37e-02 2.77e-02 2.61e-02);
+        radius 4.50e-03;
+    }
+    bead24 {
+        type searchableSphere;
+        centre (4.24e-02 2.65e-02 2.70e-02);
+        radius 4.50e-03;
+    }
+    bead25 {
+        type searchableSphere;
+        centre (5.89e-02 2.90e-02 2.70e-03);
+        radius 3.50e-03;
+    }
+    bead26 {
+        type searchableSphere;
+        centre (6.59e-02 2.77e-02 2.72e-03);
+        radius 3.50e-03;
+    }
+    bead27 {
+        type searchableSphere;
+        centre (7.24e-02 3.04e-02 2.75e-03);
+        radius 3.50e-03;
+    }
+    bead28 {
+        type searchableSphere;
+        centre (1.19e-02 2.84e-02 2.81e-03);
+        radius 3.50e-03;
+    }
+    bead29 {
+        type searchableSphere;
+        centre (4.46e-02 2.25e-02 2.80e-03);
+        radius 3.50e-03;
+    }
+    bead30 {
+        type searchableSphere;
+        centre (3.75e-02 2.21e-02 2.75e-03);
+        radius 3.50e-03;
+    }
+    bead31 {
+        type searchableSphere;
+        centre (5.44e-02 3.45e-02 3.03e-03);
+        radius 3.50e-03;
+    }
+    bead32 {
+        type searchableSphere;
+        centre (3.49e-02 3.22e-02 2.86e-03);
+        radius 3.50e-03;
+    }
+    bead33 {
+        type searchableSphere;
+        centre (4.91e-03 2.87e-02 2.83e-03);
+        radius 3.50e-03;
+    }
+    bead34 {
+        type searchableSphere;
+        centre (4.76e-02 3.22e-02 2.93e-03);
+        radius 3.50e-03;
+    }
+    bead35 {
+        type searchableSphere;
+        centre (2.67e-03 2.21e-02 2.81e-03);
+        radius 3.50e-03;
+    }
+    bead36 {
+        type searchableSphere;
+        centre (2.69e-02 3.09e-02 3.05e-03);
+        radius 3.50e-03;
+    }
+    bead37 {
+        type searchableSphere;
+        centre (4.13e-02 3.46e-02 3.05e-03);
+        radius 3.50e-03;
+    }
+    bead38 {
+        type searchableSphere;
+        centre (2.64e-02 2.09e-02 2.96e-03);
+        radius 3.50e-03;
+    }
+    bead39 {
+        type searchableSphere;
+        centre (1.37e-02 3.44e-02 3.00e-03);
+        radius 3.50e-03;
+    }
+    bead40 {
+        type searchableSphere;
+        centre (2.06e-02 3.42e-02 3.31e-03);
+        radius 3.50e-03;
+    }
+    bead41 {
+        type searchableSphere;
+        centre (7.38e-02 2.13e-02 2.88e-03);
+        radius 3.50e-03;
+    }
+    bead42 {
+        type searchableSphere;
+        centre (3.47e-03 3.43e-02 3.13e-03);
+        radius 3.50e-03;
+    }
+    bead43 {
+        type searchableSphere;
+        centre (4.06e-02 2.83e-02 3.73e-03);
+        radius 3.50e-03;
+    }
+    bead44 {
+        type searchableSphere;
+        centre (3.17e-02 2.61e-02 4.43e-03);
+        radius 3.50e-03;
+    }
+    bead45 {
+        type searchableSphere;
+        centre (1.37e-02 2.21e-02 5.08e-03);
+        radius 3.50e-03;
+    }
+    bead46 {
+        type searchableSphere;
+        centre (8.45e-03 3.31e-02 6.93e-03);
+        radius 3.50e-03;
+    }
+    bead47 {
+        type searchableSphere;
+        centre (3.05e-02 3.49e-02 7.48e-03);
+        radius 3.50e-03;
+    }
+    bead48 {
+        type searchableSphere;
+        centre (1.57e-02 3.13e-02 7.90e-03);
+        radius 3.50e-03;
+    }
+    bead49 {
+        type searchableSphere;
+        centre (6.80e-02 3.18e-02 8.00e-03);
+        radius 3.50e-03;
+    }
+    bead50 {
+        type searchableSphere;
+        centre (7.47e-02 3.19e-02 9.15e-03);
+        radius 3.50e-03;
+    }
+    bead51 {
+        type searchableSphere;
+        centre (5.76e-02 3.28e-02 8.76e-03);
+        radius 3.50e-03;
+    }
+    bead52 {
+        type searchableSphere;
+        centre (4.29e-02 3.24e-02 8.89e-03);
+        radius 3.50e-03;
+    }
+    bead53 {
+        type searchableSphere;
+        centre (3.72e-02 3.30e-02 7.74e-03);
+        radius 3.50e-03;
+    }
+    bead54 {
+        type searchableSphere;
+        centre (5.05e-02 3.05e-02 9.00e-03);
+        radius 3.50e-03;
+    }
+    bead55 {
+        type searchableSphere;
+        centre (1.05e-02 2.68e-02 9.19e-03);
+        radius 3.50e-03;
+    }
+    bead56 {
+        type searchableSphere;
+        centre (6.25e-02 2.77e-02 9.40e-03);
+        radius 3.50e-03;
+    }
+    bead57 {
+        type searchableSphere;
+        centre (3.23e-03 2.77e-02 9.29e-03);
+        radius 3.50e-03;
+    }
+    bead58 {
+        type searchableSphere;
+        centre (3.63e-02 3.02e-02 9.14e-03);
+        radius 3.50e-03;
+    }
+    bead59 {
+        type searchableSphere;
+        centre (5.59e-02 2.69e-02 1.20e-02);
+        radius 3.50e-03;
+    }
+    bead60 {
+        type searchableSphere;
+        centre (6.35e-02 3.42e-02 1.27e-02);
+        radius 3.50e-03;
+    }
+    bead61 {
+        type searchableSphere;
+        centre (0.00e+00 3.50e-02 1.18e-02);
+        radius 3.50e-03;
+    }
+    bead62 {
+        type searchableSphere;
+        centre (3.06e-02 3.11e-02 1.32e-02);
+        radius 3.50e-03;
+    }
+    bead63 {
+        type searchableSphere;
+        centre (3.86e-02 3.42e-02 1.43e-02);
+        radius 3.50e-03;
+    }
+    bead64 {
+        type searchableSphere;
+        centre (7.05e-02 3.46e-02 1.35e-02);
+        radius 3.50e-03;
+    }
+    bead65 {
+        type searchableSphere;
+        centre (1.47e-02 3.15e-02 1.44e-02);
+        radius 3.50e-03;
+    }
+    bead66 {
+        type searchableSphere;
+        centre (6.89e-02 2.87e-02 1.48e-02);
+        radius 3.50e-03;
+    }
+    bead67 {
+        type searchableSphere;
+        centre (3.85e-02 2.72e-02 1.55e-02);
+        radius 3.50e-03;
+    }
+    bead68 {
+        type searchableSphere;
+        centre (5.02e-02 2.51e-02 1.56e-02);
+        radius 3.50e-03;
+    }
+    bead69 {
+        type searchableSphere;
+        centre (9.74e-03 2.52e-02 1.57e-02);
+        radius 3.50e-03;
+    }
+    bead70 {
+        type searchableSphere;
+        centre (6.20e-02 2.84e-02 1.61e-02);
+        radius 3.50e-03;
+    }
+    bead71 {
+        type searchableSphere;
+        centre (9.47e-04 3.49e-02 1.49e-02);
+        radius 3.50e-03;
+    }
+    bead72 {
+        type searchableSphere;
+        centre (3.39e-02 3.13e-02 1.90e-02);
+        radius 3.50e-03;
+    }
+    bead73 {
+        type searchableSphere;
+        centre (1.21e-03 2.90e-02 1.82e-02);
+        radius 3.50e-03;
+    }
+    bead74 {
+        type searchableSphere;
+        centre (1.55e-02 2.67e-02 1.92e-02);
+        radius 3.50e-03;
+    }
+    bead75 {
+        type searchableSphere;
+        centre (6.75e-02 3.39e-02 1.92e-02);
+        radius 3.50e-03;
+    }
+    bead76 {
+        type searchableSphere;
+        centre (4.09e-02 3.16e-02 2.06e-02);
+        radius 3.50e-03;
+    }
+    bead77 {
+        type searchableSphere;
+        centre (3.84e-02 2.27e-02 2.06e-02);
+        radius 3.50e-03;
+    }
+    bead78 {
+        type searchableSphere;
+        centre (6.14e-02 3.19e-02 2.18e-02);
+        radius 3.50e-03;
+    }
+    bead79 {
+        type searchableSphere;
+        centre (4.70e-02 2.82e-02 2.19e-02);
+        radius 3.50e-03;
+    }
+    bead80 {
+        type searchableSphere;
+        centre (5.11e-02 3.39e-02 2.26e-02);
+        radius 3.50e-03;
+    }
+    bead81 {
+        type searchableSphere;
+        centre (1.57e-02 3.31e-02 2.27e-02);
+        radius 3.50e-03;
+    }
+    bead82 {
+        type searchableSphere;
+        centre (6.80e-02 3.05e-02 2.47e-02);
+        radius 3.50e-03;
+    }
+    bead83 {
+        type searchableSphere;
+        centre (3.12e-02 2.62e-02 2.48e-02);
+        radius 3.50e-03;
+    }
+    bead84 {
+        type searchableSphere;
+        centre (2.86e-02 3.32e-02 2.49e-02);
+        radius 3.50e-03;
+    }
+    bead85 {
+        type searchableSphere;
+        centre (3.58e-02 3.16e-02 2.55e-02);
+        radius 3.50e-03;
+    }
+    bead86 {
+        type searchableSphere;
+        centre (4.39e-03 2.39e-02 2.63e-02);
+        radius 3.50e-03;
+    }
+    bead87 {
+        type searchableSphere;
+        centre (6.09e-02 2.90e-02 2.79e-02);
+        radius 3.50e-03;
+    }
+    bead88 {
+        type searchableSphere;
+        centre (5.56e-02 3.36e-02 2.79e-02);
+        radius 3.50e-03;
+    }
+    bead89 {
+        type searchableSphere;
+        centre (1.26e-02 2.79e-02 2.86e-02);
+        radius 3.50e-03;
+    }
+    bead90 {
+        type searchableSphere;
+        centre (7.47e-02 3.21e-02 2.75e-02);
+        radius 3.50e-03;
+    }
+    bead91 {
+        type searchableSphere;
+        centre (4.84e-02 3.30e-02 2.92e-02);
+        radius 3.50e-03;
+    }
+    bead92 {
+        type searchableSphere;
+        centre (4.12e-02 3.36e-02 2.94e-02);
+        radius 3.50e-03;
+    }
+    bead93 {
+        type searchableSphere;
+        centre (5.75e-03 2.95e-02 2.98e-02);
+        radius 3.50e-03;
+    }
+}
+
+
+castellatedMeshControls {
+    maxLocalCells 100000;
+    maxGlobalCells 2000000;
+    minRefinementCells 0;
+    nCellsBetweenLevels 1;
+    refinementSurfaces {"bead.*" {level (1 3);}}
+    resolveFeatureAngle 1;
+    locationInMesh (0 0.25e-1 0.55e-1);
+    allowFreeStandingZoneFaces true;
+
+    features ();
+    refinementRegions {}
+}
+
+
+snapControls {
+    nSmoothPatch 3;
+    tolerance 0.01;
+    nSolveIter 30;
+    nRelaxIter 3;
+    // Feature snapping
+        nFeatureSnapIter 10;
+        implicitFeatureSnap true;
+        explicitFeatureSnap false;
+        // multiRegionFeatureSnap true;
+}
+
+
+addLayersControls {
+    relativeSizes true;
+    layers {"bead.*" {nSurfaceLayers 1;}}
+    expansionRatio 1.0;
+    finalLayerThickness 0.1;
+    finalLayerRatio 0.01;
+    minThickness 0.0;
+    nGrow 0;
+    featureAngle 60;
+    // slipFeatureAngle 30;
+    nRelaxIter 5;
+    nSmoothSurfaceNormals 1;
+    nSmoothNormals 3;
+    nSmoothThickness 10;
+    maxFaceThicknessRatio 0.5;
+    nBufferCellsNoExtrude 0;
+    nLayerIter 50;
+    maxThicknessToMedialRatio 0.3;
+    minMedialAxisAngle 90;
+}
+
+
+meshQualityControls {
+    maxNonOrtho 65;
+    maxBoundarySkewness 20;
+    maxInternalSkewness 4;
+    maxConcave 80;
+    minVol 1e-200;
+    minTetQuality 1e-9;
+    minArea -1;
+    minTwist 0.05;
+    minDeterminant 0.001;
+    minFaceWeight 0.05;
+    minVolRatio 0.00001;
+    minTriangleTwist -1;
+
+    nSmoothScale 4;
+    errorReduction 0.75;
+
+    relaxed {maxNonOrtho 75;}
+}
+
+debug 0;
+mergeTolerance 1e-6;
+
+// ************************************************************************* //

@@ -1,0 +1,98 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2412                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      snappyHexMeshDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+castellatedMesh true;
+snap            true;
+addLayers       false;
+
+geometry {%s
+}
+
+
+castellatedMeshControls {
+    maxLocalCells 100000;
+    maxGlobalCells 2000000;
+    minRefinementCells 0;
+    nCellsBetweenLevels 1;
+    refinementSurfaces {"bead.*" {level (1 3);}}
+    resolveFeatureAngle 1;
+    locationInMesh (0 0.25e-1 0.55e-1);
+    allowFreeStandingZoneFaces true;
+
+    features ();
+    refinementRegions {}
+}
+
+
+snapControls {
+    nSmoothPatch 3;
+    tolerance 0.01;
+    nSolveIter 30;
+    nRelaxIter 3;
+    // Feature snapping
+        nFeatureSnapIter 10;
+        implicitFeatureSnap true;
+        explicitFeatureSnap false;
+        // multiRegionFeatureSnap true;
+}
+
+
+addLayersControls {
+    relativeSizes true;
+    layers {"bead.*" {nSurfaceLayers 1;}}
+    expansionRatio 1.0;
+    finalLayerThickness 0.1;
+    finalLayerRatio 0.01;
+    minThickness 0.0;
+    nGrow 0;
+    featureAngle 60;
+    // slipFeatureAngle 30;
+    nRelaxIter 5;
+    nSmoothSurfaceNormals 1;
+    nSmoothNormals 3;
+    nSmoothThickness 10;
+    maxFaceThicknessRatio 0.5;
+    nBufferCellsNoExtrude 0;
+    nLayerIter 50;
+    maxThicknessToMedialRatio 0.3;
+    minMedialAxisAngle 90;
+}
+
+
+meshQualityControls {
+    maxNonOrtho 65;
+    maxBoundarySkewness 20;
+    maxInternalSkewness 4;
+    maxConcave 80;
+    minVol 1e-200;
+    minTetQuality 1e-9;
+    minArea -1;
+    minTwist 0.05;
+    minDeterminant 0.001;
+    minFaceWeight 0.05;
+    minVolRatio 0.00001;
+    minTriangleTwist -1;
+
+    nSmoothScale 4;
+    errorReduction 0.75;
+
+    relaxed {maxNonOrtho 75;}
+}
+
+debug 0;
+mergeTolerance 1e-6;
+
+// ************************************************************************* //
