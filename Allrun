@@ -6,7 +6,7 @@ cd "${0%/*}" || exit                                # Run from this directory
 runApplication blockMesh
 python system/format_snappyHexMeshDict.py
 runApplication surfaceFeatureExtract
-runApplication snappyHexMesh
+runApplication snappyHexMesh -overwrite
 
 restore0Dir
 runApplication setFields
