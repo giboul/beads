@@ -4,12 +4,15 @@ cd "${0%/*}" || exit                                # Run from this directory
 #------------------------------------------------------------------------------
 
 runApplication blockMesh
+runApplication decomposePar
 python system/format_snappyHexMeshDict.py
 runApplication surfaceFeatureExtract
-runApplication snappyHexMesh -overwrite
+runParallel snappyHexMesh -overwrite
 
-restore0Dir
-runApplication setFields
-runApplication $(getApplication)
+restore0Dir -processor
+runParallel setFields
+runParallel $(getApplication)
+runApplication reconstructParMesh -constant
+runApplication reconstructPar -latestTime
 
 #------------------------------------------------------------------------------

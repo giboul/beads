@@ -62,6 +62,11 @@ solvers
     }
 }
 
+potentialFlow
+{
+    nNonOrthogonalCorrectors 10;
+}
+
 PIMPLE
 {
     momentumPredictor   no;

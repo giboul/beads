@@ -9,35 +9,18 @@ FoamFile
 {
     version     2.0;
     format      ascii;
-    class       volScalarField;
-    object      p_rgh;
+    class       dictionary;
+    object      decomposeParDict;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-dimensions      [1 -1 -2 0 0 0 0];
+numberOfSubdomains 16;
 
-internalField   uniform 0;
+method          hierarchical;
 
-boundaryField {
-    #includeEtc "caseDicts/setConstraintTypes"
-
-    upperWall {
-        type            totalPressure;
-        p0              $internalField;
-    }
-
-    inlet           {
-        type            freestreamPressure;
-        freestreamValue $internalField;
-    }
-    outlet          {
-        type            zeroGradient;
-    }
-
-    "bead.*"        {type   zeroGradient;}
-    lowerWall       {type   zeroGradient;}
-    sideWalls       {type   zeroGradient;}
-    defaultFaces    {type   empty;}
+coeffs
+{
+    n           (4 4 1);
 }
 
 
