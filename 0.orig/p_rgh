@@ -26,13 +26,8 @@ boundaryField {
         p0              $internalField;
     }
 
-    inlet           {
-        type            freestreamPressure;
-        freestreamValue $internalField;
-    }
-    outlet          {
-        type            zeroGradient;
-    }
+    inlet           {type   zeroGradient;}
+    outlet          {type   zeroGradient;}
 
     "bead.*"        {type   zeroGradient;}
     lowerWall       {type   zeroGradient;}

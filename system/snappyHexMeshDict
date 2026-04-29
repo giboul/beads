@@ -15,7 +15,7 @@ FoamFile
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
 castellatedMesh true;
-snap            true;
+snap            false;
 addLayers       false;
 
 geometry {
@@ -493,8 +493,8 @@ geometry {
 
 
 castellatedMeshControls {
-    maxLocalCells 100000;
-    maxGlobalCells 2000000;
+    maxLocalCells  9000; // Important !
+    maxGlobalCells 50000; // Important !
     minRefinementCells 0;
     nCellsBetweenLevels 1;
     refinementSurfaces {"bead.*" {level (1 3);}}

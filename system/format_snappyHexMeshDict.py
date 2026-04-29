@@ -5,10 +5,10 @@ import numpy as np
 
 
 parser = ArgumentParser()
-parser.add_argument("-f", "--file_path", default="/home/giboul/Desktop/PIVRIMS/centers.txt")
+parser.add_argument("-f", "--file_path", default="centers.txt")
 args = parser.parse_args()
 
-data = np.loadtxt(Path(args.file_path), skiprows=1)
+data = np.loadtxt(Path(args.file_path).expanduser(), skiprows=1)
 
 bead_template = """
     bead{i:.0f} {{
@@ -19,7 +19,7 @@ bead_template = """
 
 txt = ""
 for i, bead in enumerate(data):
-    txt += bead_template.format(i=i, r=bead[0]/1e3, x=bead[1], y=bead[2], z=bead[3])
+    txt += bead_template.format(i=i, r=bead[0], x=bead[1], y=bead[2], z=bead[3])
 
 snappy = Path("system/snappyHexMeshDictTemplate").read_text() % txt
 

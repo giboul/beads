@@ -7,8 +7,10 @@ runApplication blockMesh
 python system/format_snappyHexMeshDict.py
 runApplication surfaceFeatureExtract
 runApplication snappyHexMesh -overwrite
-restore0Dir
 
-runApplication $(getApplication)
+paraFoam
+
+# restore0Dir
+# runApplication $(getApplication)
 
 #------------------------------------------------------------------------------
