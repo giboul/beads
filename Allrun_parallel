@@ -3,15 +3,16 @@ cd "${0%/*}" || exit                                # Run from this directory
 . ${WM_PROJECT_DIR:?}/bin/tools/RunFunctions        # Tutorial run functions
 #------------------------------------------------------------------------------
 
-runApplication blockMesh
-python system/format_snappyHexMeshDict.py
-runApplication surfaceFeatureExtract
-runApplication decomposePar
-runParallel snappyHexMesh -overwrite
 
-restore0Dir -processor
+./Allrun_pre
+
+restore0Dir
+
+runApplication decomposePar -force
 runParallel setFields
+
 runParallel $(getApplication)
+
 runApplication reconstructParMesh -constant
 # runApplication reconstructPar -latestTime
 runApplication reconstructPar

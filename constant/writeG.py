@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 from argparse import ArgumentParser
 from pathlib import Path
-from math import atan, sin , cos
+from math import sin , cos
 
 def parse_args():
     p = ArgumentParser()

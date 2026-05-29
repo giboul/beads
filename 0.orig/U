@@ -16,23 +16,25 @@ FoamFile
 
 dimensions      [0 1 -1 0 0 0 0];
 
-internalField   uniform (1 0 0);
+internalField   uniform (0 0 0);
 
 boundaryField {
-    #includeEtc "caseDicts/setConstraintTypes"
+    // #includeEtc "caseDicts/setConstraintTypes"
+
+    lowerWall       {type   zeroGradient;}
+    outlet          {type   zeroGradient;}
+    sideWalls       {type   zeroGradient;}
+    upperWall       {type   zeroGradient;}
+    inletUpperWall  {type   zeroGradient;}
+    defaultFaces    {type   empty;}
 
     inlet {
-        type            fixedValue;
-        value           $internalField;
+        type            zeroGradient;
+        // type            fixedValue;
+        // value           $internalField;
     }
 
-    outlet          {type   zeroGradient;}
-
     "bead.*"        {type   noSlip;}
-    lowerWall       {type   noSlip;}
-    sideWalls       {type   noSlip;}
-    upperWall       {type   zeroGradient;}
-    defaultFaces    {type   empty;}
 }
 
 

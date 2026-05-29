@@ -1,0 +1,8 @@
+cd "${0%/*}" || exit                                # Run from this directory
+. ${WM_PROJECT_DIR:?}/bin/tools/RunFunctions        # Tutorial run functions
+#--------------------------------
+
+python system/format_snappyHexMeshDict.py
+runApplication surfaceFeatureExtract
+runApplication blockMesh
+runApplication snappyHexMesh -overwrite
